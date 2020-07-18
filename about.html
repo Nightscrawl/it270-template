@@ -9,6 +9,7 @@
         <link href="css/reset.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/1552b45d46.js" crossorigin="anonymous"></script>
+        <script src="js/nav.js"></script>
     </head>
     
     <body class="inner-page about">
@@ -25,10 +26,21 @@
                         <a href="index.html">Title Here</a>
                     </div>
 
-                    <nav>
+                    <!-- <nav>
                         <a href="about.html">About</a>
                         <a href="blog.html">Blog</a>
                         <a href="#">Contact</a>
+                    </nav> -->
+
+                    <!-- https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+                    <nav class="topnav" id="myTopnav">
+                        <a href="index.html" class="title-link">Title Here</a>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="#">Contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
                     </nav>
 
                 </div>
@@ -64,21 +76,26 @@
 
                 </main>
 
+                <!-- https://unsplash.com/ -->
                 <aside>
                     <h2>Headline Two, Primary Aside</h2>
 
-                    <h3>Headline Three, Sub Aside</h3>
+                    <figure>
+                        <img src="img/sample1.jpg" alt="sample1" title="Sample One" />
+                        <figcaption>Sample One</figcaption>
+                    </figure>
+
                     <p>
                         Vel turpis nunc eget lorem dolor. <a href="https://www.latimes.com/">Cras sed felis eget</a> velit aliquet sagittis id. Convallis convallis tellus id interdum velit laoreet id donec ultrices. Ipsum faucibus vitae aliquet nec ullamcorper. Sed ullamcorper morbi tincidunt ornare massa eget. Pharetra convallis posuere morbi leo urna molestie. Ut ornare lectus sit amet est placerat in egestas. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae.
                     </p>
 
-                    <h4>Headline Four</h4>
+                    <figure>
+                        <img src="img/sample2.jpg" alt="sample2" title="Sample Two" />
+                        <figcaption>Sample Two</figcaption>
+                    </figure>
 
-                    <h5>Headline Five</h5>
-
-                    <h6>Headline Six</h6>
                     <p>
-                        Adipiscing <a href="https://www.cnn.com/">elit duis tristique</a> sollicitudin nibh sit. Cras ornare arcu dui vivamus arcu felis bibendum ut. Augue neque gravida in fermentum et. Integer enim neque volutpat ac. Tortor consequat id porta nibh venenatis. Aliquam malesuada bibendum arcu vitae elementum curabitur. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Ornare suspendisse sed nisi lacus.
+                        Vel turpis nunc eget lorem dolor. <a href="https://www.latimes.com/">Cras sed felis eget</a> velit aliquet sagittis id. Convallis convallis tellus id interdum velit laoreet id donec ultrices. Ipsum faucibus vitae aliquet nec ullamcorper. Sed ullamcorper morbi tincidunt ornare massa eget. Pharetra convallis posuere morbi leo urna molestie. Ut ornare lectus sit amet est placerat in egestas. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae.
                     </p>
 
                 </aside>

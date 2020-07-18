@@ -9,6 +9,7 @@
         <link href="css/reset.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/1552b45d46.js" crossorigin="anonymous"></script>
+        <script src="js/nav.js"></script>
     </head>
     
     <body class="home">
@@ -25,10 +26,21 @@
                         <a href="index.html">Title Here</a>
                     </div>
 
-                    <nav>
+                    <!-- <nav>
                         <a href="about.html">About</a>
                         <a href="blog.html">Blog</a>
                         <a href="#">Contact</a>
+                    </nav> -->
+
+                    <!-- https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+                    <nav class="topnav" id="myTopnav">
+                        <a href="index.html" class="title-link">Title Here</a>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="#">Contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
                     </nav>
 
                 </div>
@@ -108,7 +120,7 @@
 
 
         </div> <!-- end container -->
-    
+
     </body>
     
 </html>
