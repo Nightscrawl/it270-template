@@ -1,0 +1,317 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+    
+img {
+    max-width: 100%;
+    display: block;
+}
+    
+html {
+    font-size: 16px;
+}
+    
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto  1fr auto auto;
+    grid-template-areas: 
+        "header"
+        "banner"
+        "content"
+        "footer"
+        "border";
+
+    gap: 0;    
+}
+
+.border {
+    height: 20px;    
+}
+
+.header-inner, .footer-inner, .content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 16px 0 12px;
+}
+
+h1:first-child, h2:first-child {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* HEADER 
+-------------------------------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    padding: 0 20px;
+}
+
+.home .header-inner {
+    justify-content: center;
+}
+
+.inner-page .header-inner {
+    justify-content: space-between;
+}
+
+.home .title-bar {
+    display: none;
+}
+
+.inner-page .title-bar {
+    /* padding-left: 20px; */
+    display: inline-block;
+}
+
+.title-bar, nav {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-variant: small-caps;
+}
+
+.title-bar a, nav a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.home .banner {
+    padding: 50px 0;
+}
+
+.inner-page .banner {
+    height: 100px;
+}
+
+.home .title-main {
+    margin: 0;
+    font-size: 4rem;
+    font-variant: small-caps;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+        /* h-offset, v-offset, blur, color */
+}
+
+.inner-page .title-main {
+    display: none;
+}
+
+
+/* CONTENT 
+-------------------------------------------------- */
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 20px;
+}
+
+main {
+    width: 66%;
+    padding: 20px;
+}
+
+aside {
+    width: 34%;
+    padding: 20px;    
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+p:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+.content a {
+    display: inline-block;
+    padding: 1px;
+    text-decoration: none;
+}
+
+
+/* FOOTER 
+-------------------------------------------------- */
+
+footer {
+    padding: 20px 0;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+footer a {
+    color: white;
+}
+
+.copy {
+    font-size: 0.6875rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+
+/* COLORS
+-------------------------------------------------- */
+
+body {
+    background-color: #cccccc;
+}
+
+.border {
+    background-color: black;
+}
+
+header {
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, .5);
+        /* h-offset, v-offset, blur, spread (size), color */
+}
+
+.title-bar a:hover, nav a:hover {
+    background-color: silver;
+}
+
+aside {
+    background-color: #b2b2b2;
+}
+
+
+/* images from
+https://www.toptal.com/designers/subtlepatterns/ */
+
+.home .banner, .home footer {
+    background-color: #1C305D;
+    background-image: url(../img/flower.png);
+    background-repeat: repeat;
+}
+
+.about .banner, .about footer {
+    background-color: #00572A;
+    background-image: url(../img/trees.png);
+    background-repeat: repeat;
+}
+
+.blog .banner, .blog footer {
+    background-color: #44002C;
+    background-image: url(../img/star.png);
+    background-repeat: repeat;
+}
+
+.home .content a:link {
+    color: #0050FF;
+}
+
+.about .content a:link {
+    color: #006E3E;
+}
+
+.blog .content a:link {
+    color: #A83F85;
+}
+
+.home .content a:hover, .inner-page .content a:hover {
+    background-color: black;
+    color: white;
+}
+
+.content a:visited {
+    color: gray;
+}
+
+
+
+
+
+/* MOBILE MEDIA QUERIES
+-------------------------------------------------- */
+
+@media screen and (max-width: 760px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    main {
+        width: 100%;
+    }
+    
+    aside {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+    
+    aside {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 0;
+    }
+}
